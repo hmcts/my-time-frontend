@@ -1,54 +1,19 @@
-import * as React from 'react';
-import * as GovUK from 'govuk-react';
-import { MemoryRouter as Router, Routes, Route } from 'react-router';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-import Home from './home';
-import Forms from './forms/forms';
-
-const ExampleApplication: React.FC<ExampleApplicationProps> = ({ routerEntries }: ExampleApplicationProps) => (
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+root.render(
   <React.StrictMode>
-    <Router initialEntries={routerEntries}>
-      <GovUK.GlobalStyle />
-      <GovUK.TopNav
-        serviceTitle={
-          <GovUK.TopNav.Anchor as={Link} to="/">
-            React
-          </GovUK.TopNav.Anchor>
-        }
-        search={
-          <GovUK.SearchBox>
-            <GovUK.SearchBox.Input placeholder="Search GOV.UK" />
-            <GovUK.SearchBox.Button />
-          </GovUK.SearchBox>
-        }
-      >
-        <GovUK.TopNav.NavLink as={Link} to="/">
-          Home
-        </GovUK.TopNav.NavLink>
-        <GovUK.TopNav.NavLink as={Link} to="/forms">
-          Forms
-        </GovUK.TopNav.NavLink>
-      </GovUK.TopNav>
-      <GovUK.Page.WidthContainer>
-        <GovUK.Page.Main>
-          <Routes>
-            <Route path="/forms/*" element={<Forms />} />
-            <Route path="/" element={<Home />} />
-          </Routes>
-        </GovUK.Page.Main>
-      </GovUK.Page.WidthContainer>
-      <GovUK.Footer />
-    </Router>
+    <App />
   </React.StrictMode>
 );
 
-export interface ExampleApplicationProps {
-  routerEntries?: string[];
-}
-
-ExampleApplication.defaultProps = {
-  routerEntries: undefined,
-};
-
-export default ExampleApplication;
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

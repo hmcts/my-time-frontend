@@ -98,6 +98,7 @@ const uiSchema = {
   },
 };
 
+// @ts-ignore
 const conditionalAddError = (value, validator, errors) => {
   const error = validator(value);
   if (error) {
@@ -105,6 +106,7 @@ const conditionalAddError = (value, validator, errors) => {
   }
 };
 
+// @ts-ignore
 const validate = (formData, errors) => {
   conditionalAddError(formData[0].nationality, validateNationality, errors[0].nationality);
   conditionalAddError(formData[0].firstName, validateFirstName, errors[0].firstName);
@@ -135,6 +137,7 @@ const ReactJSONSchemaForm: React.FC = () => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [submittedData, setSubmittedData] = useState<SubmittedData>();
   const handleFormSubmit = useCallback(
+      // @ts-ignore
     ({ formData }, e) => {
       if (isSubmitting) return;
       setIsSubmitting(true);

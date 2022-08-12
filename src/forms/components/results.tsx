@@ -14,6 +14,7 @@ const Results: React.FC<ResultsProps> = ({
   petPhoto,
   petPhotoString,
 }: ResultsProps) => {
+  // @ts-ignore
   const [photoString, setPhotoString] = useState<string>(petPhotoString);
   useEffect(() => {
     if (petPhoto && petPhoto[0]) {

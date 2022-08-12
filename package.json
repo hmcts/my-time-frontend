@@ -1,14 +1,33 @@
 {
-  "name": "@govuk-react/example-application",
-  "version": "0.10.1",
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@rjsf/core": "^3.1.0",
+    "@rjsf/core": "^4.2.3",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "core-js": "^3.0.1",
     "final-form": "^4.20.7",
     "formik": "^2.2.9",
     "govuk-colours": "^1.1.0",
     "govuk-react": "^0.10.1",
-    "styled-components": "^5.3.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-final-form": "^6.5.9",
+    "react-hook-form": "^7.34.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "styled-components": "^5.3.5",
+    "typescript": "^4.4.2",
+    "web-vitals": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=12"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
@@ -16,96 +35,42 @@
     "react-is": ">=16.8.0"
   },
   "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "test:cypress": "cypress run-ct",
     "cypress": "cypress open-ct",
     "version": "yarn version"
   },
-  "engines": {
-    "node": ">=12",
-    "yarn": ">=2"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "module": "dist/govuk-react-example-application.esm.js",
-  "source": "src/index.tsx",
-  "author": "Alasdair McLeay",
-  "license": "MIT",
-  "homepage": "https://github.com/govuk-react/govuk-react#readme",
-  "description": "An example application using govuk-react",
-  "publishConfig": {
-    "access": "public"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "@babel/cli": "7.14.3",
-    "@babel/core": "7.14.3",
-    "@babel/node": "7.14.2",
-    "@babel/plugin-transform-runtime": "7.17.10",
-    "@babel/preset-env": "7.14.2",
-    "@babel/preset-react": "7.13.13",
-    "@babel/preset-typescript": "7.13.0",
     "@cypress/react": "^5.12.4",
     "@cypress/webpack-dev-server": "^1.8.4",
-    "@testing-library/dom": "^7.28.1",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^14.1.1",
     "@types/jest": "^26.0.16",
-    "@types/react": "^16.14.16",
-    "@types/react-router-dom": "5",
-    "@types/styled-components": "^5.1.14",
-    "@typescript-eslint/eslint-plugin": "^4.0.0",
-    "@typescript-eslint/parser": "^4.25.0",
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^27.0.2",
-    "babel-loader": "^8.2.5",
-    "babel-plugin-add-module-exports": "^1.0.4",
-    "babel-plugin-styled-components": "^2.0.7",
+    "@types/react-router-dom": "^5.3.3",
     "cypress": "^9.6.0",
     "cypress-file-upload": "^5.0.8",
-    "enzyme": "^3.7.0",
-    "enzyme-to-json": "^3.3.4",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-airbnb-typescript": "^14.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-react-app": "^6.0.0",
-    "eslint-plugin-cypress": "^2.11.3",
-    "eslint-plugin-flowtype": "^5.10.0",
-    "eslint-plugin-import": "^2.23.2",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-no-only-tests": "^2.6.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "final-form": "^4.20.7",
-    "html-webpack-plugin": "^5.5.0",
-    "istanbul-merge": "^1.1.1",
-    "jest": "^26.6.3",
-    "jest-styled-components": "^7.0.4",
-    "jest-transform-stub": "^2.0.0",
-    "mkdirp-promise": "^5.0.1",
-    "nyc": "^15.1.0",
-    "prettier": "^2.3.0",
-    "react": "^17.0.2",
-    "react-docgen-typescript": "^2.1.0",
-    "react-dom": "^17.0.2",
-    "react-final-form": "^6.5.9",
-    "react-hook-form": "^7.30.0",
     "react-is": "^17.0.2",
-    "react-router": "^6.3.0",
-    "react-router-dom": "^6.3.0",
-    "typescript": "^4.2.4",
-    "webpack": "^5.72.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.8.1",
     "workspace-alias": "^0.1.0"
   },
-  "packageManager": "yarn@3.0.1",
-  "bundlesize": [
-    {
-      "path": "./dist/main.js",
-      "maxSize": "120 kB"
-    }
-  ],
   "nyc": {
     "report-dir": "coverage/unit",
     "reporter": [
@@ -138,13 +103,10 @@
     }
   },
   "workspaces": [
-    "components/*",
     "src/*"
   ],
-  "private": true,
   "preconstruct": {
     "packages": [
-      "components/*",
       "src/*"
     ]
   }

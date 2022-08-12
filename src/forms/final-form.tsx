@@ -29,8 +29,10 @@ interface FieldProps<T, I> extends Omit<FFFieldProps<T, FieldRenderProps<T, HTML
 function Field<T, I>({ component: Component, name, ...props }: FieldProps<T, I>) {
   return (
     <FFField name={name} {...props}>
+      {/*// @ts-ignore*/}
       {({ input, meta }: { input: I; meta: { touched?: boolean; submitFailed?: boolean } }) => (
-        <Component
+          // @ts-ignore
+          <Component
           name={name}
           {...props}
           input={input}
@@ -41,16 +43,19 @@ function Field<T, I>({ component: Component, name, ...props }: FieldProps<T, I>)
   );
 }
 
+// @ts-ignore
 const Checkbox = ({ input, ...props }) => <GovUK.Checkbox {...input} {...props} />;
 const DateField: React.FC<
   React.ComponentProps<typeof GovUK.DateField> & { meta: { touched: boolean; error: string } }
 > = ({ meta, ...props }) => (
   <GovUK.DateField errorText={meta.touched && meta.error ? meta.error : undefined} {...props} />
 );
+// @ts-ignore
 const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />;
 const FileUpload: React.FC<
   React.ComponentProps<typeof GovUK.FileUpload> & { input: { value: string; onChange: (any: FileList) => void } }
 > = ({ input: { value, onChange, ...input }, ...props }) => (
+    // @ts-ignore
   <GovUK.FileUpload {...input} {...props} onChange={({ target }) => onChange(target.files)} />
 );
 
@@ -59,6 +64,7 @@ const FinalForm: React.FC = () => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [submittedData, setSubmittedData] = useState();
   const handleFormSubmit = useCallback(
+      // @ts-ignore
     (values) => {
       if (isSubmitting) return;
       setIsSubmitting(true);
@@ -78,9 +84,12 @@ const FinalForm: React.FC = () => {
         <Form
           onSubmit={handleFormSubmit}
           initialValues={{ dob: { day: '', month: '', year: '' } }}
+            // @ts-ignore
           render={({ handleSubmit: handleSubmitInner, errors, touched, form }) => {
+            // @ts-ignore
             const errorsToShow = Object.keys(errors).filter((key) => touched[key]);
             form.pauseValidation();
+            // @ts-ignore
             const handleSubmit = (e) => {
               form.resumeValidation();
               const res = handleSubmitInner(e);
@@ -99,6 +108,7 @@ const FinalForm: React.FC = () => {
                       description="Please address the following issues"
                       errors={errorsToShow.map((key) => ({
                         targetName: key,
+                        // @ts-ignore
                         text: errors[key],
                       }))}
                     />
@@ -110,6 +120,7 @@ const FinalForm: React.FC = () => {
                       mb={4}
                       hint="You can find this on your passport"
                       validate={validateFirstName}
+                        // @ts-ignore
                       component={GovUK.InputField}
                     >
                       First name
@@ -119,6 +130,7 @@ const FinalForm: React.FC = () => {
                       name="description"
                       hint="Enter as many words as you like"
                       validate={validateDescription}
+                        // @ts-ignore
                       component={GovUK.TextArea}
                     >
                       Description of what you saw
@@ -135,19 +147,23 @@ const FinalForm: React.FC = () => {
                           name="nationality"
                           value="british"
                           validate={validateNationality}
+                            // @ts-ignore
                           component={Checkbox}
                           hint="including English, Scottish, Welsh and Northern Irish"
                         >
                           British
                         </Field>
+                        {/*// @ts-ignore*/}
                         <Field type="checkbox" name="nationality" value="irish" component={Checkbox}>
                           Irish
                         </Field>
+                        {/*// @ts-ignore*/}
                         <Field type="checkbox" name="nationality" value="other" component={Checkbox}>
                           Citizen of another country
                         </Field>
                       </GovUK.Label>
                     </GovUK.FormGroup>
+                    {/*// @ts-ignore*/}
                     <Field name="dob" component={DateField} validate={validateDateOfBirth}>
                       Date of birth
                     </Field>
@@ -155,6 +171,7 @@ const FinalForm: React.FC = () => {
                   <GovUK.Fieldset>
                     <GovUK.Fieldset.Legend size="M">About your pet</GovUK.Fieldset.Legend>
                     <Field
+                        // @ts-ignore
                       component={GovUK.Select}
                       mb={8}
                       name="animal"
@@ -172,6 +189,7 @@ const FinalForm: React.FC = () => {
                     https://github.com/final-form/react-final-form/issues/663
                     */}
                     <Field
+                        // @ts-ignore
                       component={FileUpload}
                       mb={8}
                       acceptedFormats=".jpg, .png"
@@ -187,6 +205,7 @@ const FinalForm: React.FC = () => {
                       meta={{ error: errors?.hasMultiplePets, touched: !!touched?.hasMultiplePets }}
                     >
                       <Field
+                          // @ts-ignore
                         component={Radio}
                         type="radio"
                         name="hasMultiplePets"
@@ -196,6 +215,7 @@ const FinalForm: React.FC = () => {
                       >
                         Yes
                       </Field>
+                      {/*// @ts-ignore*/}
                       <Field component={Radio} type="radio" name="hasMultiplePets" inline value="no">
                         No
                       </Field>
@@ -211,7 +231,8 @@ const FinalForm: React.FC = () => {
         />
       )}
       {hasSubmitted && (
-        <Results backLink="/forms/final-form" onBackClick={() => setHasSubmitted(false)} {...submittedData} />
+          // @ts-ignore
+          <Results backLink="/forms/final-form" onBackClick={() => setHasSubmitted(false)} {...submittedData} />
       )}
     </>
   );

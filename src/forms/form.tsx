@@ -13,11 +13,14 @@ import {
 } from './validators/validators';
 import Results from './components/results';
 
+// @ts-ignore
 function isNotEmpty(obj) {
     return Object.keys(obj).some((key) => obj[key]?.length > 0);
 }
 
+// @ts-ignore
 const toggle = (array, newItem) =>
+    // @ts-ignore
     array.includes(newItem) ? array.filter((existingItem) => existingItem !== newItem) : [...array, newItem];
 
 const Form: React.FC = () => {
@@ -57,6 +60,7 @@ const Form: React.FC = () => {
             setIsSubmitting(true);
             setTimeout(() => {
                 // simulate async submission
+                // @ts-ignore
                 setErrors(null);
                 setHasSubmitted(true);
                 setIsSubmitting(false);
@@ -77,6 +81,7 @@ const Form: React.FC = () => {
                             description="Please address the following issues"
                             errors={Object.keys(errors).map((key) => ({
                                 targetName: key,
+                                // @ts-ignore
                                 text: errors[key],
                             }))}
                         />
@@ -89,6 +94,7 @@ const Form: React.FC = () => {
                             {errors?.firstName && <GovUK.ErrorText>{errors.firstName}</GovUK.ErrorText>}
                             <GovUK.Input
                                 name="firstName"
+                                // @ts-ignore
                                 onChange={(e) => setFirstName(e.target.value)}
                                 value={firstName}
                                 error={!!errors?.firstName}
@@ -165,6 +171,7 @@ const Form: React.FC = () => {
                             name="petPhoto"
                             meta={{error: errors?.petPhoto, touched: !!errors?.petPhoto}}
                             onChange={(event) => {
+                                // @ts-ignore
                                 setPetPhoto(event.target.files);
                             }}
                         >
@@ -206,7 +213,9 @@ const Form: React.FC = () => {
                     description={description}
                     nationality={nationality}
                     dob={dob}
+                    // @ts-ignore
                     animal={animal}
+                    // @ts-ignore
                     hasMultiplePets={hasMultiplePets}
                     petPhoto={petPhoto}
                 />
