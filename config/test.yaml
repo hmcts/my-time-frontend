@@ -1,0 +1,7 @@
+security:
+  referrerPolicy: 'origin'
+services:
+  api:
+    url: MYTIME_API_URL
+appInsights:
+  instrumentationKey:

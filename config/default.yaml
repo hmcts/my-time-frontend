@@ -1,0 +1,7 @@
+security:
+  referrerPolicy: 'origin'
+services:
+  api:
+    url: 'http://localhost:4000'
+appInsights:
+  instrumentationKey:
