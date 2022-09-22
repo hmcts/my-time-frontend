@@ -1,0 +1,11 @@
+nodejs:
+  applicationPort: 3000
+  aadIdentityName: my-time
+  ingressHost: my-time.{{ .Values.global.environment }}.platform.hmcts.net
+  image: 'hmctspublic.azurecr.io/my-time/frontend:latest'
+  keyVaults:
+    rpts:
+      secrets:
+        - AppInsightsInstrumentationKey
+  environment:
+    MYTIME_API_URL: "http://my-time-api-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal"

@@ -2,6 +2,6 @@ security:
   referrerPolicy: 'origin'
 services:
   api:
-    url: MYTIME_API_URL
+    url: MY_TIME_API_URL
 appInsights:
   instrumentationKey: APPINSIGHTS_KEY

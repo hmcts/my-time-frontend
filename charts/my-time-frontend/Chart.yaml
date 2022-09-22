@@ -1,8 +1,8 @@
 apiVersion: v2
 appVersion: '1.0'
-description: A Helm chart for mytime-frontend App
-name: mytime-frontend
-home: https://github.com/hmcts/mytime-frontend
+description: A Helm chart for my-time-frontend App
+name: my-time-frontend
+home: https://github.com/hmcts/my-time-frontend
 version: 0.0.1
 dependencies:
   - name: nodejs

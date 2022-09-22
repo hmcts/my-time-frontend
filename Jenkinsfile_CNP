@@ -1,0 +1,36 @@
+#!groovy
+
+@Library("Infrastructure") _
+
+def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
+
+def type = "nodejs"
+def product = "my-time"
+def component = "frontend"
+
+withPipeline(type, product, component) {
+    disableLegacyDeployment()
+
+    after('build') {
+        yarnBuilder.yarn('build')
+    }
+
+    enableSlackNotifications('#my-time-build')
+
+    onMaster() {
+        env.ENV = 'stg'
+    }
+    onPR() {
+        env.ENV = 'dev'
+    }
+    onDemo {
+        env.ENV = 'demo'
+    }
+    onPerftest {
+        env.ENV = 'perftest'
+    }
+    onIthc {
+        env.ENV = 'ithc'
+    }
+
+}
