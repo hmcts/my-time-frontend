@@ -9,7 +9,6 @@ def product = "my-time"
 def component = "frontend"
 
 withPipeline(type, product, component) {
-    disableLegacyDeployment()
 
     after('build') {
         yarnBuilder.yarn('build')
