@@ -116,7 +116,7 @@ const ReactHookForm: React.FC = () => {
                                 <GovUK.Label mb={4}>
                                     <GovUK.LabelText>Nationality</GovUK.LabelText>
                                     {submitCount > 0 && errors?.nationality?.message && (
-                                        <GovUK.ErrorText>{errors?.nationality.message}</GovUK.ErrorText>
+                                        <GovUK.ErrorText>"Error"</GovUK.ErrorText>
                                     )}
                                     <GovUK.Checkbox
                                         type="checkbox"

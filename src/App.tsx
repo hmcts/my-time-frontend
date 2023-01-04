@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 import Home from './home';
 import Forms from './forms/forms';
+import Account from "./account/account";
 
 function App() {
     return (
@@ -22,7 +23,7 @@ const MyTimeApp: React.FC<MyTimeAppProps> = ({ routerEntries }: MyTimeAppProps) 
             <GovUK.TopNav
                 serviceTitle={
                     <GovUK.TopNav.Anchor as={Link} to="/">
-                        React
+                        My-Time
                     </GovUK.TopNav.Anchor>
                 }
                 search={
@@ -40,12 +41,16 @@ const MyTimeApp: React.FC<MyTimeAppProps> = ({ routerEntries }: MyTimeAppProps) 
                 <GovUK.TopNav.NavLink as={Link} to="/forms">
                     Forms
                 </GovUK.TopNav.NavLink>
+                <GovUK.TopNav.NavLink as={Link} to="/account">
+                    Account
+                </GovUK.TopNav.NavLink>
             </GovUK.TopNav>
             <GovUK.Page.WidthContainer>
                 <GovUK.Page.Main>
                     <Routes>
                         <Route path="/forms/*" element={<Forms />} />
                         <Route path="/" element={<Home />} />
+                        <Route path="/account/*" element={<Account />} />
                     </Routes>
                 </GovUK.Page.Main>
             </GovUK.Page.WidthContainer>

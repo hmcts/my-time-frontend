@@ -21,7 +21,7 @@ const Forms: React.FC = () => (
       element={
         <>
             {/*// @ts-ignore*/}
-          <GovUK.H2>Forms</GovUK.H2>
+
           <GovUK.Paragraph>Which form example would you like to run?</GovUK.Paragraph>
           <GovUK.UnorderedList>
             <GovUK.ListItem>
