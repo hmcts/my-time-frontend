@@ -3,7 +3,7 @@ appVersion: '1.0'
 description: A Helm chart for my-time-frontend App
 name: my-time-frontend
 home: https://github.com/hmcts/my-time-frontend
-version: 0.0.1
+version: 0.0.2
 dependencies:
   - name: nodejs
     version: 2.4.13
