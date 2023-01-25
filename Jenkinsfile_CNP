@@ -10,7 +10,7 @@ def component = "frontend"
 
 withPipeline(type, product, component) {
 
-    afterSuccess() {
+    after('build') {
         yarnBuilder.yarn('build')
     }
 
