@@ -37,7 +37,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --testPathPattern 'src/unit_tests'",
     "eject": "react-scripts eject",
     "test:cypress": "cypress run-ct",
     "cypress": "cypress open-ct",
