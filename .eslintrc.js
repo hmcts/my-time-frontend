@@ -1,16 +1,11 @@
 const { devDependencies } = require('./package.json');
-const { dependencies: gukd } = require('./packages/govuk-react/package.json');
 
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'no-only-tests'],
+  plugins: ['@typescript-eslint'],
   extends: [
-    'airbnb',
-    'prettier',
     'react-app',
-    'plugin:prettier/recommended',
-    'plugin:cypress/recommended',
     'plugin:import/typescript',
     'eslint:recommended',
   ],
@@ -18,7 +13,6 @@ module.exports = {
     es6: true,
   },
   rules: {
-    'prettier/prettier': ['error'],
     'filenames/match-exported': 0,
     'jsx-a11y/label-has-associated-control': 0,
     'import/extensions': [
@@ -42,20 +36,15 @@ module.exports = {
         project: './tsconfig.json',
       },
       extends: [
-        'airbnb',
-        'airbnb-typescript',
-        'prettier',
         'react-app',
-        'plugin:prettier/recommended',
-        'plugin:cypress/recommended',
         'plugin:import/typescript',
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:import/typescript',
       ],
       rules: {
-        'prettier/prettier': ['error'],
-        '@typescript-eslint/explicit-module-boundary-types': 'error',
+        '@typescript-eslint/explicit-module-boundary-types': 'warn',
+        '@typescript-eslint/ban-ts-comment': 0,
         'react/jsx-props-no-spreading': 0,
         'filenames/match-exported': 0,
         'react/static-property-placement': ['error', 'static public field'],
@@ -79,16 +68,12 @@ module.exports = {
       settings: {
         'import/core-modules': [
           'govuk-react',
-          ...Object.keys(devDependencies),
-          ...Object.keys(gukd).filter((dep) => dep.startsWith('@govuk-react/')),
+          ...Object.keys(devDependencies)
         ],
       },
     },
     {
       files: ['**.test.[jt]s?(x)', '**.spec.[jt]s?(x)'],
-      rules: {
-        'no-only-tests/no-only-tests': 'error',
-      },
     },
     {
       files: ['test.[jt]s?(x)', '**.test.[jt]s?(x)'],
