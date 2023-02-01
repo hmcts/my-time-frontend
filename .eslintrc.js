@@ -43,7 +43,7 @@ module.exports = {
         'plugin:import/typescript',
       ],
       rules: {
-        '@typescript-eslint/explicit-module-boundary-types': 'warn',
+        '@typescript-eslint/explicit-module-boundary-types': 0,
         '@typescript-eslint/ban-ts-comment': 0,
         'react/jsx-props-no-spreading': 0,
         'filenames/match-exported': 0,
