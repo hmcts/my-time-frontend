@@ -47,7 +47,8 @@
     "build:prod": "react-scripts build",
     "test:functional": "cypress run-ct",
     "cichecks": "yarn build && yarn rebuild puppeteer && yarn lint",
-    "test:coverage": "echo 'add test converage later on'"
+    "test:coverage": "echo 'add test converage later on'",
+    "test:a11y": "echo 'add accessibility tests in later on'"
   },
   "eslintConfig": {
     "extends": [
