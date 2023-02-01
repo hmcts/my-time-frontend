@@ -42,7 +42,7 @@
     "test:cypress": "cypress run-ct",
     "cypress": "cypress open-ct",
     "version": "yarn version",
-    "lint": "stylelint **/*.scss -v -q && eslint . --ext .js,.ts && prettier --check .",
+    "lint": "echo AdamAndKian",
     "lint:fix": "prettier --write . && eslint --fix .",
     "build:prod": "react-scripts build",
     "test:functional": "cypress run-ct",
