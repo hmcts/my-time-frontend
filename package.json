@@ -109,5 +109,7 @@
     "packages": [
       "src/*"
     ]
-  }
+  },
+  "packageManager": "yarn@3.4.0"
 }
+
