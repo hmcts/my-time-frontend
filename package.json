@@ -41,7 +41,12 @@
     "eject": "react-scripts eject",
     "test:cypress": "cypress run-ct",
     "cypress": "cypress open-ct",
-    "version": "yarn version"
+    "version": "yarn version",
+    "lint": "stylelint **/*.scss -v -q && eslint . --ext .js,.ts && prettier --check .",
+    "lint:fix": "prettier --write . && eslint --fix .",
+    "build:prod": "react-scripts build",
+    "test:functional": "cypress run-ct",
+    "cichecks": "yarn build && yarn rebuild puppeteer && yarn lint"
   },
   "eslintConfig": {
     "extends": [
