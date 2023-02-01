@@ -46,7 +46,8 @@
     "lint:fix": "prettier --write . && eslint --fix .",
     "build:prod": "react-scripts build",
     "test:functional": "cypress run-ct",
-    "cichecks": "yarn build && yarn rebuild puppeteer && yarn lint"
+    "cichecks": "yarn build && yarn rebuild puppeteer && yarn lint",
+    "test:coverage": "echo 'add test converage later on'"
   },
   "eslintConfig": {
     "extends": [
