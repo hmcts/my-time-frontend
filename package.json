@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@rjsf/core": "^4.2.3",
+    "@rjsf/core": "^5.1.0",
+    "@rjsf/utils": "^5.1.0",
+    "@testing-library/dom": "^8.20.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
-    "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.13",
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "core-js": "^3.0.1",
@@ -73,7 +75,7 @@
     "@cypress/webpack-dev-server": "^1.8.4",
     "@types/jest": "^26.0.16",
     "@types/react-router-dom": "^5.3.3",
-    "cypress": "^9.6.0",
+    "cypress": "^12.5.1",
     "cypress-file-upload": "^5.0.8",
     "react-is": "^17.0.2",
     "workspace-alias": "^0.1.0"
@@ -117,5 +119,5 @@
       "src/*"
     ]
   },
-  "packageManager": "yarn@3.4.0"
+  "packageManager": "yarn@3.4.1"
 }
