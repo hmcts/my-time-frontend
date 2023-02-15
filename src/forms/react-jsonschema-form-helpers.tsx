@@ -219,6 +219,7 @@ export const ErrorListTemplate: React.FC<{ errors: AjvError[] }> = ({errors}) =>
     />
 );
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 export const ObjectFieldTemplate: React.FC<ObjectFieldTemplateProps> = ({title, properties}) => {
     return (
         <GovUK.Fieldset>
