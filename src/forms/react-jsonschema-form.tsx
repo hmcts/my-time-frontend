@@ -161,6 +161,7 @@ const ReactJSONSchemaForm: React.FC = () => {
           <Form
             schema={formSchema}
             uiSchema={uiSchema}
+              // @ts-ignore
             onSubmit={handleFormSubmit}
             validate={validate}
             onError={() => null}

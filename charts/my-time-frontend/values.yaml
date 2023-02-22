@@ -4,7 +4,7 @@ nodejs:
   ingressHost: my-time.{{ .Values.global.environment }}.platform.hmcts.net
   image: 'hmctspublic.azurecr.io/my-time/frontend:latest'
   keyVaults:
-    rpts:
+    my-time:
       secrets:
         - AppInsightsInstrumentationKey
   environment:

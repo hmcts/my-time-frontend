@@ -219,11 +219,12 @@ export const ErrorListTemplate: React.FC<{ errors: AjvError[] }> = ({errors}) =>
     />
 );
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 export const ObjectFieldTemplate: React.FC<ObjectFieldTemplateProps> = ({title, properties}) => {
     return (
         <GovUK.Fieldset>
             {title && <GovUK.Fieldset.Legend size="M">{title}</GovUK.Fieldset.Legend>}
-            {properties.map((element) => element.content)}
+            {properties.map((element: { content: any; }) => element.content)}
         </GovUK.Fieldset>
     );
 };
@@ -231,9 +232,9 @@ export const ObjectFieldTemplate: React.FC<ObjectFieldTemplateProps> = ({title, 
 export const CustomFieldTemplate: React.FC<FieldTemplateProps> = ({children}) => <>{children}</>;
 
 export const Form: React.FC<FormProps<void>> = (props) => (
-    // @ts-ignore
     <BaseForm
         fields={customFields}
+        // @ts-ignore
         FieldTemplate={CustomFieldTemplate}
         ObjectFieldTemplate={ObjectFieldTemplate}
         ErrorList={ErrorListTemplate}
