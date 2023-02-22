@@ -8,4 +8,4 @@ nodejs:
       secrets:
         - AppInsightsInstrumentationKey
   environment:
-    MYTIME_API_URL: "http://my-time-api-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal"
+    MY_TIME_API_URL: "http://my-time-api-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal"

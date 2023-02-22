@@ -4,4 +4,4 @@ services:
   api:
     url: MY_TIME_API_URL
 appInsights:
-  instrumentationKey: APPINSIGHTS_KEY
+  instrumentationKey: "test"
