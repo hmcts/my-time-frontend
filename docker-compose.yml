@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  my-time-frontend:
+    build:
+      context: .
+      args:
+        - http_proxy
+        - https_proxy
+        - no_proxy
+    ports:
+      - 3000:3000

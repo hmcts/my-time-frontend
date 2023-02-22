@@ -1,16 +1,15 @@
-# ---- Base image ----
-FROM hmctspublic.azurecr.io/base/node:16-alpine as base
-COPY --chown=hmcts:hmcts . .
-RUN yarn install --production \
-  && yarn cache clean
+# Specify a base image
+FROM node:alpine
 
-# ---- Build image ----
-FROM base as build
-RUN yarn install && yarn build:prod
+WORKDIR '/app'
 
-# ---- Runtime image ----
-FROM base as runtime
-RUN rm -rf webpack/ webpack.config.js
-COPY --from=build $WORKDIR/src/main ./src/main
-# TODO: expose the right port for your application
-EXPOSE 8080
+# Install some depenendencies
+COPY package.json .
+RUN yarn install
+COPY . .
+
+# Uses port which is used by the actual application
+EXPOSE 3000
+
+# Default command
+CMD ["yarn", "run", "start"]
