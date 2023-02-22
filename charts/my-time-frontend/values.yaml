@@ -2,9 +2,10 @@ nodejs:
   applicationPort: 3000
   aadIdentityName: my-time
   ingressHost: my-time.{{ .Values.global.environment }}.platform.hmcts.net
-  image: 'hmctspublic.azurecr.io/my-time/frontend:latest'
+  image: 'sdshmctspublic.azurecr.io/my-time/frontend:latest'
   keyVaults:
     my-time:
+      resourceGroup: my-time-{{ .Values.global.environment }}-rg
       secrets:
         - AppInsightsInstrumentationKey
   environment:
