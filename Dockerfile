@@ -1,7 +1,7 @@
 # Specify a base image
 FROM hmctspublic.azurecr.io/base/node:14-alpine as base
 
-#WORKDIR '/app'
+WORKDIR /app
 
 # Install some depenendencies
 COPY --chown=hmcts:hmcts . .

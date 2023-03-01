@@ -37,7 +37,7 @@
     "react-is": ">=16.8.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "echo ls && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --testPathPattern 'src/unit_tests'",
     "eject": "react-scripts eject",
