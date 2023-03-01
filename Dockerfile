@@ -12,7 +12,7 @@ RUN yarn
 EXPOSE 3000
 
 # Default command
-CMD ["yarn", "run", "start"]
+#CMD ["yarn", "run", "start"]
 #
 #
 ## ---- Base image ----
