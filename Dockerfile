@@ -4,10 +4,9 @@ FROM hmctspublic.azurecr.io/base/node:14-alpine as base
 #WORKDIR '/app'
 
 # Install some depenendencies
-#COPY package.json .
-RUN yarn install
-#COPY . .
 COPY --chown=hmcts:hmcts . .
+
+RUN yarn
 
 # Uses port which is used by the actual application
 EXPOSE 3000
