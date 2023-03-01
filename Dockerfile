@@ -1,12 +1,13 @@
 # Specify a base image
-FROM node:alpine
+FROM hmctspublic.azurecr.io/base/node:14-alpine as base
 
-WORKDIR '/app'
+#WORKDIR '/app'
 
 # Install some depenendencies
-COPY package.json .
+#COPY package.json .
 RUN yarn install
-COPY . .
+#COPY . .
+COPY --chown=hmcts:hmcts . .
 
 # Uses port which is used by the actual application
 EXPOSE 3000
