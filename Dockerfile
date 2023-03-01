@@ -1,5 +1,5 @@
 # Specify a base image
-FROM hmctspublic.azurecr.io/base/node:14-alpine as base
+FROM hmctspublic.azurecr.io/base/node:16-alpine as base
 
 #WORKDIR '/app'
 
