@@ -37,7 +37,7 @@
     "react-is": ">=16.8.0"
   },
   "scripts": {
-    "start": "yarn run start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --testPathPattern 'src/unit_tests'",
     "eject": "react-scripts eject",
@@ -73,7 +73,7 @@
   "devDependencies": {
     "@cypress/react": "^5.12.4",
     "@cypress/webpack-dev-server": "^1.8.4",
-    "@types/jest": "^26.0.16",
+    "@types/jest": "^29.4.0",
     "@types/react-router-dom": "^5.3.3",
     "cypress": "^12.5.1",
     "cypress-file-upload": "^5.0.8",
