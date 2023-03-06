@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { mount } from '@cypress/react';
+import { mount } from 'cypress/react';
 import App from '../App';
 
-const formModes = ['Basic', 'Final Form', 'Formik', 'React Hook Form', 'React JSON Schema Form'];
+const formModes = ['Basic', 'Final Form', 'Formik', 'React Hook Form'];
 
 Cypress.config('defaultCommandTimeout', 10000);
 
