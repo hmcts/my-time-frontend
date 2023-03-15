@@ -12,3 +12,9 @@
 !src/main/**
 !config/**
 !webpack.config.js
+
+!public
+!src
+src/cypress
+src/unit_tests
+src/setupTests.ts
