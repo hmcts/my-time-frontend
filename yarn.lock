@@ -3213,18 +3213,18 @@ __metadata:
   linkType: hard
 
 "@rjsf/core@npm:^5.4.0":
-  version: 5.4.0
-  resolution: "@rjsf/core@npm:5.4.0"
+  version: 5.7.2
+  resolution: "@rjsf/core@npm:5.7.2"
   dependencies:
-    lodash: ^4.17.15
-    lodash-es: ^4.17.15
+    lodash: ^4.17.21
+    lodash-es: ^4.17.21
     markdown-to-jsx: ^7.2.0
-    nanoid: ^3.3.4
-    prop-types: ^15.7.2
+    nanoid: ^3.3.6
+    prop-types: ^15.8.1
   peerDependencies:
-    "@rjsf/utils": ^5.0.0
+    "@rjsf/utils": 5.7.x
     react: ^16.14.0 || >=17
-  checksum: 3d0a2bd0814c8aae3ffb524a0d53ba9141475bcf63975b9a5409602ab9d3ce60f0bdc49c86cff7e30b0d1468562e74a8d5ec2a61b9e5329cf9ef57dcdf227167
+  checksum: a2c40a71db35b4609a41bebb173060ff0fdab7007cbd1fe6f958e50fb15b2ecef4f0d63648d882b5af59b35327c1d92c34178f1609c5b9d9f7ca77b2704ca427
   languageName: node
   linkType: hard
 
@@ -11211,6 +11211,15 @@ __metadata:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: 2fddd6dee994b7676f008d3ffa4ab16035a754f4bb586c61df5a22cf8c8c94017aadd360368f47d653829e0569a92b129979152ff97af23a558331e47e37cd9c
+  languageName: node
+  linkType: hard
+
+"nanoid@npm:^3.3.6":
+  version: 3.3.6
+  resolution: "nanoid@npm:3.3.6"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 7d0eda657002738aa5206107bd0580aead6c95c460ef1bdd0b1a87a9c7ae6277ac2e9b945306aaa5b32c6dcb7feaf462d0f552e7f8b5718abfc6ead5c94a71b3
   languageName: node
   linkType: hard
 
