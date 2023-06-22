@@ -11191,7 +11191,7 @@ __metadata:
     react-dom: ^18.2.0
     react-final-form: ^6.5.9
     react-hook-form: ^7.43.8
-    react-is: ^17.0.2
+    react-is: ^18.0.0
     react-router-dom: ^6.9.0
     react-scripts: ^5.0.1
     styled-components: ^5.3.9
@@ -13048,7 +13048,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^17.0.1, react-is@npm:^17.0.2":
+"react-is@npm:^17.0.1":
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
