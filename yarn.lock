@@ -1871,19 +1871,20 @@ __metadata:
   linkType: hard
 
 "@cypress/webpack-dev-server@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "@cypress/webpack-dev-server@npm:3.4.0"
+  version: 3.7.4
+  resolution: "@cypress/webpack-dev-server@npm:3.7.4"
   dependencies:
     find-up: 6.3.0
     fs-extra: 9.1.0
     html-webpack-plugin-4: "npm:html-webpack-plugin@^4"
     html-webpack-plugin-5: "npm:html-webpack-plugin@^5"
     local-pkg: 0.4.1
+    semver: ^7.5.3
     speed-measure-webpack-plugin: 1.4.2
     tslib: ^2.3.1
     webpack-dev-server: ^4.7.4
     webpack-merge: ^5.4.0
-  checksum: 255424185c5e6414152b1d3ec2157c2ec0fdfde0510a5be8320940721c6bbfec620e2cdf992dbf6209f7a8df7078db51aef19d509c540eb3c3191e5ae1532174
+  checksum: 6395a3f024ae45b6b18d061cfd732137e34685543ed0213311dd1a94b110d886e49d06cdf7cb2c2eba2e964c59ebd77f92c07a7d9d50ccb3a699ba3226062c47
   languageName: node
   linkType: hard
 
@@ -13812,6 +13813,17 @@ resolve@^2.0.0-next.3:
   bin:
     semver: bin/semver.js
   checksum: 2fa3e877568cd6ce769c75c211beaed1f9fce80b28338cadd9d0b6c40f2e2862bafd62c19a6cff42f3d54292b7c623277bcab8816a2b5521cf15210d43e75232
+  languageName: node
+  linkType: hard
+
+"semver@npm:^7.5.3":
+  version: 7.5.4
+  resolution: "semver@npm:7.5.4"
+  dependencies:
+    lru-cache: ^6.0.0
+  bin:
+    semver: bin/semver.js
+  checksum: 12d8ad952fa353b0995bf180cdac205a4068b759a140e5d3c608317098b3575ac2f1e09182206bf2eb26120e1c0ed8fb92c48c592f6099680de56bb071423ca3
   languageName: node
   linkType: hard
 
